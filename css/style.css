@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('./colores.css');
 html, body{
     margin: 0;
     padding: 0;
@@ -34,6 +35,7 @@ html, body{
     position: absolute;
     height: 80px;
     right: 50px;
+    z-index: 1;
 }
 .menu ul{
     list-style: none;
@@ -58,7 +60,7 @@ html, body{
     height: 70px;
     border-radius: 100%;
     background: none;
-    border: 5px solid #f5c3af;
+    border: 5px solid var(--colorFiguras);
     top: 10%;
     left: 16%;
     z-index: -1;
@@ -68,7 +70,7 @@ html, body{
     width: 130px;
     height: 130px;
     border-radius: 100%;
-    background: #f5c3af;
+    background: var(--colorFiguras);
     /* border: 5px solid #f5c3af; */
     top: 60%;
     left: 35%;
@@ -80,7 +82,7 @@ html, body{
     height: 80px;
     border-radius: 100%;
     background: none;
-    border: 4px solid #f5c3af;
+    border: 4px solid var(--colorFiguras);
     top: 25%;
     left: 90%;
     z-index: -1;
@@ -97,11 +99,11 @@ html, body{
     transform: translate(-50%, -50%);
     font-family: Anton;
     font-size: 90px;
-    color: #f5c3af;
+    color: var(--colorTitulo2);
     font-style: italic;
     text-transform: uppercase;
     z-index: 1;
-    -webkit-text-stroke: 2px #f5c3af;
+    -webkit-text-stroke: 2px var(--colorTitulo2);
     opacity: 0;
 }
 .title-1{
@@ -111,12 +113,12 @@ html, body{
     transform: translate(-50%, -50%);
     font-family: Anton;
     font-size: 90px;
-    color: #cae9fc;
+    color: var(--colorTitulo1);
     padding-right: 20px;
     font-style: italic;
     text-transform: uppercase;
     z-index: 1;
-    -webkit-text-stroke: 2px #cae9fc;
+    -webkit-text-stroke: 2px var(--colorTitulo1);
     opacity: 0;
 }
 .content{
@@ -124,15 +126,15 @@ html, body{
     top: 75%;
     left: 57%;
     width: 36%;
-    color: grey;
+    color: var(--colorTexto);
     font-weight: lighter;
     font-size: 14px;
     line-height: 24px;
 }
 button{
     margin-top: 0px;
-    background: #cae9fc;
-    color: black;
+    background: var(--colorBoton);
+    color: var(--colorTexto);
     padding: 20px 30px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -148,7 +150,7 @@ button{
 .media ul li{
     cursor: pointer;
     list-style: none;
-    color: grey;
+    color: var(--colorTexto);
     padding: 10px 0;
 }
 

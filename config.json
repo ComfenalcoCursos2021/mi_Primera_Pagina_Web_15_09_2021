@@ -1,0 +1,58 @@
+{
+    "Header":{
+        "Logos":[
+            {
+                "Nombre": "ion-icon",
+                "Valor" : "infinite-outline"
+            },
+            {
+                "Nombre": "ion-icon",
+                "Valor" : "cart"
+            }
+        ],
+        "Menu":[
+            {
+                "Nombre": "Incio",
+                "Valor": "#"
+            },
+            {
+                "Nombre": "Productos",
+                "Valor": "#"
+            },
+            {
+                "Nombre": "Formulario",
+                "Valor": "#"
+            },
+            {
+                "Nombre": "Contactos",
+                "Valor": "#"
+            }
+        ]
+    },
+    "Autor":{
+        "Titulo-1": "Castro Escamilla",
+        "Titulo-2": "Miguel Angel"
+    },
+    "Texto":{
+        "Parrafo": "Tecnólogo en ADSI con enfoque en creación de páginas web y analista en base de datos MYSQL. Conocimientos en adobe illustrator cc 2020, after effects cc 2020, 7 años de experiencia en la programación web, con conocimientos en Angular-Cli, Javascript, PHP y Flutter. Manejo de librerías de terceros como bootstrap, jquery.",
+        "Boton": "Siguiente"
+    },
+    "Footer":[
+        {
+            "Nombre": "ion-icon",
+            "Valor" : "logo-facebook"
+        },
+        {
+            "Nombre": "ion-icon",
+            "Valor" : "logo-instagram"
+        },
+        {
+            "Nombre": "ion-icon",
+            "Valor" : "logo-twitch"
+        },
+        {
+            "Nombre": "ion-icon",
+            "Valor" : "logo-youtube"
+        }
+    ]
+}

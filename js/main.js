@@ -1,4 +1,70 @@
-addEventListener("DOMContentLoaded", (e)=>{
+addEventListener("DOMContentLoaded", async(e)=>{
+    const peticion = await fetch("../config.json");
+    const data = await peticion.json();
+    console.log(data);
+
+
+
+    //Menu
+    let menu = "<ul>";
+    for(let [id, value] of Object.entries(data.Header.Menu)){
+        menu += `<li>${value.Nombre}</li>`
+    }
+    menu += "</ul>";
+    document.querySelector(".menu").insertAdjacentHTML('afterbegin', menu);
+
+
+
+    // Iconos
+    const iconos = (data)=>{
+        let fragmen = document.createDocumentFragment();
+        let div = document.createElement(`DIV`);
+        div.id = "myLogos";
+        fragmen.appendChild(div);
+        for(let [id, value] of Object.entries(data)){
+            let logo = document.createElement(`${value.Nombre}`);
+            logo.name = value.Valor;
+            fragmen.children.myLogos.appendChild(logo);
+        }
+        return fragmen;
+    }
+    let Logos = iconos(data.Header.Logos).children.myLogos.children;
+    document.querySelector(".logo").insertAdjacentElement('afterbegin', Logos[0]);
+    document.querySelector(".cart").insertAdjacentElement('afterbegin', Logos[0]);
+    
+    
+
+    Logos = iconos(data.Footer);
+    let ul = document.createElement("UL");
+    for(let [id, value] of Object.entries(Logos.children.myLogos.children)){
+        let li = document.createElement("LI");
+        li.appendChild(value);
+        ul.appendChild(li);
+    }
+    document.querySelector(".media").insertAdjacentElement('afterbegin',ul);
+
+
+
+    // Autor
+    document.querySelector(".title-1").insertAdjacentText('afterbegin',data.Autor['Titulo-1']);
+    document.querySelector(".title-2").insertAdjacentText('afterbegin',data.Autor['Titulo-2']);
+
+
+
+    //Perfil
+    let plantilla = `
+    <p>${data.Texto.Parrafo}</p>
+    <button>${data.Texto.Boton}</button>`;
+
+    document.querySelector(".content").insertAdjacentHTML('afterbegin',plantilla);
+
+
+
+
+
+
+
+    // Animaciones de la pagina
     TweenMax.to(".title-1",2,{
         x:-10,
         opacity:1,
