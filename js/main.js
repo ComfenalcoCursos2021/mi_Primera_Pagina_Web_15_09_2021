@@ -1,5 +1,5 @@
 addEventListener("DOMContentLoaded", async(e)=>{
-    const peticion = await fetch("../config.json");
+    const peticion = await fetch("config.json");
     const data = await peticion.json();
     console.log(data);
 
